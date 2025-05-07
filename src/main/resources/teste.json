@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {"id": "N1", "latitude": 0.0, "longitude": 0.0},
+    {"id": "N2", "latitude": 1.0, "longitude": 0.0},
+    {"id": "N3", "latitude": 2.0, "longitude": 0.0},
+    {"id": "N4", "latitude": 0.0, "longitude": 1.0},
+    {"id": "N5", "latitude": 1.0, "longitude": 1.0},
+    {"id": "N6", "latitude": 2.0, "longitude": 1.0},
+    {"id": "N7", "latitude": 0.0, "longitude": 2.0},
+    {"id": "N8", "latitude": 1.0, "longitude": 2.0},
+    {"id": "N9", "latitude": 2.0, "longitude": 2.0}
+  ],
+  "edges": [
+    {"id": "E1", "source": "N1", "target": "N2", "length": 100.0, "travel_time": 0.0, "oneway": false, "maxspeed": 50.0},
+    {"id": "E2", "source": "N2", "target": "N3", "length": 100.0, "travel_time": 0.0, "oneway": false, "maxspeed": 50.0},
+    {"id": "E3", "source": "N1", "target": "N4", "length": 100.0, "travel_time": 0.0, "oneway": true, "maxspeed": 50.0},
+    {"id": "E4", "source": "N4", "target": "N5", "length": 100.0, "travel_time": 0.0, "oneway": false, "maxspeed": 50.0},
+    {"id": "E5", "source": "N5", "target": "N6", "length": 100.0, "travel_time": 0.0, "oneway": false, "maxspeed": 50.0},
+    {"id": "E6", "source": "N4", "target": "N7", "length": 100.0, "travel_time": 0.0, "oneway": true, "maxspeed": 50.0},
+    {"id": "E7", "source": "N7", "target": "N8", "length": 100.0, "travel_time": 0.0, "oneway": false, "maxspeed": 50.0},
+    {"id": "E8", "source": "N8", "target": "N9", "length": 100.0, "travel_time": 0.0, "oneway": false, "maxspeed": 50.0},
+    {"id": "E9", "source": "N2", "target": "N5", "length": 100.0, "travel_time": 0.0, "oneway": false, "maxspeed": 50.0},
+    {"id": "E10", "source": "N5", "target": "N8", "length": 100.0, "travel_time": 0.0, "oneway": true, "maxspeed": 50.0}
+  ]
+}

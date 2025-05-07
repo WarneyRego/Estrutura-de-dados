@@ -1,0 +1,56 @@
+Algoritmo de cidade.Dijkstra com Fila Encadeada em Java
+Este projeto apresenta uma estrutura de apoio para implementação do Algoritmo de cidade.Dijkstra, adaptada ao contexto de uma disciplina de Estrutura de Dados, onde os alunos devem utilizar estruturas próprias, como listas, filas e pilhas encadeadas.
+
+O algoritmo retorna o caminho de menor custo entre um vértice de origem e um de destino, como uma Fila Encadeada de vértices.
+
+Estrutura Esperada
+Assume-se que as seguintes classes básicas estejam previamente implementadas:
+
+Vertice
+class Vertice {
+    String nome;
+    // métodos como getNome(), equals(), hashCode()
+}
+
+Aresta
+class Aresta {
+    Vertice origem;
+    Vertice destino;
+    int custo;
+}
+
+Grafo
+class Grafo {
+    ListaEncadeada<Vertice> vertices;
+    ListaEncadeada<Aresta> arestas;
+
+    ListaEncadeada<Aresta> obterArestasDe(Vertice v);
+}
+
+Explicações e Uso
+A classe Grafo deve permitir adicionar e recuperar vértices e arestas.
+O método obterArestasDe(Vertice v) retorna todas as arestas cujo origem seja o vértice v.
+O custo de cada aresta representa o tempo de travessia, distância ou outro critério a ser minimizado.
+O algoritmo utiliza uma fila encadeada para retornar o caminho mais curto.
+
+Possíveis Modificações e Extensões
+
+Custos Variáveis
+O campo custo de Aresta pode ser calculado dinamicamente conforme horário de pico, condição da via ou volume de tráfego.
+
+Inclusão de Semáforos
+Uma Intersecao pode conter um Semaforo, com tempos de verde/vermelho que afetam o custo da aresta.
+O custo pode ser alterado em tempo de execução conforme o estado do semáforo.
+
+Grupos de Semáforos
+Grupos sincronizados de semáforos podem ser modelados com uma classe GrupoSemaforos, afetando diversas arestas simultaneamente.
+
+Otimizações Futuras
+Substituir HashMap e HashSet por implementações próprias.
+Adicionar suporte para múltiplos caminhos de custo igual.
+Permitir cancelamento e replanejamento de rotas dinâmicas.
+
+Requisitos
+Java 8+
+Implementação própria de ListaEncadeada, FilaEncadeada, PilhaEncadeada
+Implementação das classes Vertice, Aresta, Grafo

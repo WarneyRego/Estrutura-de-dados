@@ -1,0 +1,64 @@
+Simulador de Mobilidade Urbana para Controle de Tráfego e Semáforos
+
+ Uso de Estruturas de Dados em Grafos
+
+ Trabalho Final de Estruturas de Dados
+
+ Resumo
+ Este trabalho propõe o desenvolvimento de um simulador para a gestão do tráfego urbano, com foco no controle inteligente de semáforos. A rede urbana é modelada como um grafo, onde os nós representam interseções e as arestas, as ruas. O sistema simula a geração e o deslocamento de veículos e, por meio de heurísticas de controle, otimiza os ciclos dos semáforos, visando reduzir o tempo de espera dos veículos e, alternativamente, otimizar o consumo de energia. Ao final da simulação, o sistema apresenta estatísticas como tempos médios de viagem, de espera e índices de congestionamento.
+
+ I. INTRODUÇÃO
+ A crescente demanda por soluções que melhorem a mobilidade urbana tem impulsionado o desenvolvimento de sistemas inteligentes de controle de tráfego. Este projeto tem como objetivo criar um simulador que modele a dinâmica do tráfego em uma cidade, utilizando uma abordagem baseada em grafos para representar a rede urbana. O foco principal é o controle de semáforos por meio de heurísticas adaptativas que otimizem tanto o fluxo de veículos quanto o consumo energético.
+
+ II. CONTEXTUALIZAÇÃO
+ O simulador representa a cidade por meio de um grafo, onde cada nó é uma interseção, que pode ou não estar equipada com semáforos, e cada aresta é uma rua com atributos como comprimento, capacidade de fluxo, direção (sentido único ou mão dupla) e tempo de travessia (tempo que o veículo leva para ir de um nó a outro da mesma aresta). Veículos são gerados aleatoriamente, possuem origens e destinos determinados e utilizam algoritmos de caminho mínimo para definir suas rotas. O sistema de controle dos semáforos, por sua vez, ajusta os tempos de verde, amarelo e vermelho com base nas condições de tráfego, podendo operar em trˆes modos distintos:
+    • Modelo 1: Ciclo fixo, sem heurísticas.
+    • Modelo 2: Otimização do tempo de espera, ajustando dinamicamente os ciclos conforme as filas de veículos.
+    • Modelo 3: Otimização do consumo de energia, priorizando estratégias que minimizem deslocamentos desnecessários e ajustem os ciclos conforme os períodos de pico e de menor movimentação.
+
+ III. OBJETIVOS
+ • Modelar a rede urbana como um grafo com interseções e ruas.
+ • Simular a geração e o deslocamento de veículos, calculando rotas eficientes.
+ • Implementar um sistema de controle de semáforos baseado em heurísticas adaptativas.
+ • Gerenciar a simulação utilizando estruturas de dados (filas e listas). Não utilizar estruturas de dados prontas do Java (como ArrayList, StringList, grafos, etc). Construa suas próprias classes de listas, filas, pilhas, grafos e tudo o mais que for necessário.
+ • Registrar e apresentar estatísticas da simulação, como tempo médio de viagem, tempo médio de espera e índices de congestionamento.
+
+IV. REQUISITOS FUNCIONAIS
+ 1) Representar a cidade como um grafo, onde cada nó corresponde a uma interseção e cada aresta a uma rua com atributos configuráveis (comprimento, capacidade, tempo de travessia).
+ 2) Gerar veículos de forma aleatória com origens e destinos definidos, utilizando algoritmos de caminho mínimo (ex.: cidade.Dijkstra) para determinar rotas. O algoritmo de cidade.Dijkstra será fornecido, não havendo necessidade de implementar.
+ 3) Simular o controle dos semáforos em cada interseção, com ciclos configuráveis e modos de operação baseados nas seguintes heurísticas:
+    a) Modelo 1: Ciclo fixo.
+    b) Modelo 2: Otimização do tempo de espera, ajustando os ciclos em função das filas de veículos.
+    c) Modelo 3: Otimização do consumo de energia.
+    4) Permitir a configuração de parâmetros de geração de tráfego, tempos de ciclo dos semáforos, atributos das ruas e horários de pico.
+
+ 5) Registrar dados da simulação, como tempo de viagem, tempo de espera em interseções, volume de veículos e consumo energético (se aplicável).
+ V. REQUISITOS NÃO FUNCIONAIS
+    • O sistema deverá utilizar eficientemente estruturas de dados, especialmente grafos, filas e listas.
+    • A implementação deve ser modular e bem documentada, facilitando futuras alterações e expansões.
+    • A interface do simulador deve fornecer logs e, se possível, uma visualização gráfica simplificada da rede e do fluxo de veículos.
+
+ VI. PARÂMETROS DE CONFIGURAÇÃO
+ • Número de interseções (nós) e ruas (arestas) da rede urbana.
+ • Atributos das ruas: comprimento, capacidade, tempo de travessia (com variações para horários de pico e fora de pico).
+ • Taxa de geração de veículos e distribuição de origens/destinos.
+ • Parâmetros dos semáforos: tempos de verde, amarelo e vermelho; modo de operação (fixo ou adaptativo).
+ • Escolha do modelo de heurística: Modelo 1, Modelo 2 ou Modelo 3.
+ • Parâmetros relacionados ao consumo de energia (valor unitário por deslocamento, por parada, etc.).
+
+ VII. ENTREGÁVEIS
+ 1) Código-fonte: Implementação completa e comentada em Java.
+ 2) Documento Técnico: Descrição da modelagem do sistema, das estruturas de dados utilizadas (representação do grafo, filas de espera) e dos algoritmos implementados para controle dos semáforos.
+ 3) Apresentação (PPTX): Slides explicativos (formato widescreen) com a modelagem, desafios, heurísticas aplicadas e resultados da simulação.
+ 4) Relatório Final: Análise estatística dos resultados da simulação, com gráficos e tabelas que evidenciem tempo médio de viagem, tempo de espera, fluxo de veículos, índices de congestionamento e consumo energético.
+ 5) Demonstração Prática: Vídeo ou capturas de tela que evidenciem a execução e os resultados do simulador.
+
+ VIII. CRITÉRIOS DE AVALIAÇÃO
+ • Correção e completude na implementação dos requisitos funcionais.
+ • Eficiência e adequação na utilização das estruturas de dados, com ênfase na modelagem do grafo.
+ • Qualidade e clareza do código-fonte, documentação técnica e apresentação.
+ • Inovação e criatividade na definição e implementação das heurísticas de controle dos semáforos.
+ • Capacidade do sistema em adaptar-se a diferentes escalas e configurações da rede urbana.
+
+IX. CONCLUSÃO
+ Este projeto visa integrar conceitos de estruturas de dados, algoritmos de grafos e simulação de eventos para criar uma ferramenta de análise e otimização do tráfego urbano. Através da modelagem da cidade como um grafo e da implementação de heurísticas inteligentes para o controle dos semáforos, espera-se contribuir para a melhoria da mobilidade e para a eficiência energética no contexto urbano.
